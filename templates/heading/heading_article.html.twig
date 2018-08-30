@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+
+    {% for article in heading.articles %}
+        <h1>{{ article.title|e }}</h1>
+        {{ article.content|raw }}
+    {% endfor %}
+
+{% endblock %}

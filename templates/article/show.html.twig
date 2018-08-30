@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{title}} {{ controller_name }} Réciprocité 54{% endblock %}
+
+{% block body %}
+
+    <article>
+        <h2>{{article.title}}</h2>
+        <div class="content">
+            <img src="{{article.image}}" alt="">
+            <p>{{article.content | raw }}</p>
+        </div>
+    </article>
+
+{% endblock %}

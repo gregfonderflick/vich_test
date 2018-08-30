@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+
+{% block title %}Hello {{ controller_name }}!{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <div>
+            {{ form_start(our_form) }}
+            {{ form_row(our_form.service) }}
+
+            {{ form_row(our_form.name, {'attr':{'placeholder': "votre nom"} }) }}
+            {{ form_row(our_form.from, {'attr':{'placeholder': "votre email"} }) }}
+            {{ form_row(our_form.choice) }}
+            {{ form_row(our_form.file, {'attr':{'required': 'file'} }) }}
+            {{ form_row(our_form.message, {'attr':{'placeholder': "votre message"} }) }}
+            {{ form_row(our_form.submit) }}
+            {{ form_rest(our_form) }}
+            {{ form_end(our_form) }}
+        </div>
+    </div>
+{% endblock %}
